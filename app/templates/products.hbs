@@ -1,0 +1,9 @@
+<h1>Products</h1>
+
+<ul>
+ {{#each model}}
+ <li>{{#link-to 'product' this}}{{this.id}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
