@@ -1,0 +1,1 @@
+EmberProducts.ApplicationAdapter = DS.FixtureAdapter;
