@@ -1,9 +1,16 @@
-<h1>Products</h1>
+<div class="col-md-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">Products list</div>
+    <div class="panel-body">
+      <div class="list-group">
+      {{#each model}}
+        {{#link-to 'product' this classNames="list-group-item"}}{{this.name}} ({{this.id}}){{/link-to}}
+      {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
 
-<ul>
- {{#each model}}
- <li>{{#link-to 'product' this}}{{this.name}} ({{this.id}}){{/link-to}}</li>
-  {{/each}}
-</ul>
-
+<div class="col-md-9">
 {{outlet}}
+</div>

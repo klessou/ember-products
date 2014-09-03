@@ -1,18 +1,12 @@
-<h1>Product</h1>
+<div class="jumbotron">
+  <h1>{{model.name}}</h1>
+  <p>{{model.description}}</p>
+  {{!-- {{#each model.attributes}}
+  <p><strong>{{this.key}}:</strong></p>
+  <p>{{this.value}}</p>
+  {{/each}} --}}
+</div>
 
-<table>
-  {{#each model.attributes}}
-  <tr>
-    <td>
-      <strong>{{this.key}}:</strong>
-    </td>
-    <td>
-      {{this.value}}
-    </td>
-  </tr>
-  {{/each}}
-</table>
-
-{{#link-to 'product.edit' model}}Change{{/link-to}}
+{{#link-to 'product.edit' model classNames="btn btn-primary btn-lg"}}Change{{/link-to}}
 
 {{outlet}}
