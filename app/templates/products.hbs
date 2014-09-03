@@ -2,7 +2,7 @@
 
 <ul>
  {{#each model}}
- <li>{{#link-to 'product' this}}{{this.id}}{{/link-to}}</li>
+ <li>{{#link-to 'product' this}}{{this.name}} ({{this.id}}){{/link-to}}</li>
   {{/each}}
 </ul>
 
