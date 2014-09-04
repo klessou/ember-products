@@ -1,6 +1,15 @@
 <h1>Product : {{model.name}}</h1>
 
-<table>
+<div class="form-group">
+  <label for="modelName">Name</label>
+  {{input value=model.name classNames='form-control' id='modelName'}}
+</div>
+<div class="form-group">
+  <label for="modelDescription">Description</label>
+  {{textarea value=model.description classNames='form-control' id='modelDescription'}}
+</div>  
+
+{{!-- <table>
   {{#each buffer}}
   <tr>
     <td>
@@ -11,7 +20,7 @@
     </td>
   </tr>
   {{/each}}
-</table>
+</table> --}}
 
 <button class="btn btn-primary" {{action 'save'}}>Update</button>
 
