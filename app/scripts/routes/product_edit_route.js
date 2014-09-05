@@ -7,7 +7,9 @@ EmberProducts.ProductEditRoute = Ember.Route.extend({
     buffer = model.get('attributes').map(function(attr){
       return { key: attr.get('key'), value: attr.get('value') }
     });
-    controller.set('buffer', buffer)
+    controller.set('buffer', buffer);
+    bufferBackup = buffer;
+    controller.set('bufferBackup', bufferBackup);
   }
 });
 
