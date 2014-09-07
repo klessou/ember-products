@@ -2,7 +2,10 @@
 EmberProducts.Product = DS.Model.extend({
     name: DS.attr('string'),
 
-    description: DS.attr('string')
+    description: DS.attr('string'),
+    
+    changed: DS.attr('date'),
+    created: DS.attr('date'),
 });
 
 // probably should be mixed-in...
@@ -26,7 +29,10 @@ EmberProducts.Product.FIXTURES = [
     description: 'Our toughest, most dependable briefcase is appropriate for everyday use in the field. \
       Inside is a wide carrying compartment, two full-length open pockets and sewn-on compartments for calculator, \
       business cards, pencils and pens. Narrow pockets on both ends and full-length outer pockets on both sides. \
-      You won\'t find more durability in a fabric briefcase. Meets carry-on requirements. Made in USA.'
+      You won\'t find more durability in a fabric briefcase. Meets carry-on requirements. Made in USA.',
+
+    changed: '2014-09-01T00:00:00Z',
+    created: '2014-09-01T00:00:00Z',
     
   },
   
@@ -40,8 +46,11 @@ EmberProducts.Product.FIXTURES = [
       More pockets hold a battery pack, diskettes, calculator, business cards, pens, pencils and notebooks. \
       Narrow pockets on both ends, full-length outer pockets on both sides and adjustable, removable leather \
       shoulder strap with brass-plated roller buckle and leather pad. Leather grip and storm flap with snap closures. \
-      Double bottom. Meets carry-on requirements. Made in USA.'
+      Double bottom. Meets carry-on requirements. Made in USA.',
     
+    changed: '2014-09-01T00:00:00Z',
+    created: '2014-09-01T00:00:00Z',
+
   }
   
 ];

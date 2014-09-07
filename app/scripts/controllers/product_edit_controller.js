@@ -1,5 +1,14 @@
 EmberProducts.ProductEditController = Ember.ObjectController.extend({
   needs: 'product',
+
+  created: function() {
+    return moment(this.get('model.created')).fromNow();
+  }.property('model.created'),
+
+  changed: function() {
+    return moment(this.get('model.changed')).fromNow();
+  }.property('model.changed'),
+
   actions: {
     save: function(){
       self = this
