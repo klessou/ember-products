@@ -1,9 +1,11 @@
 <h1>Product : {{name}}</h1>
 
+{{#if edit}}
 <div class="bg-info">
   <p class="text-info">Created: {{created}}</p>
   <p class="text-info">Changed: {{changed}}</p>
 </div>
+{{/if}}
 
 <div class="form-group">
   <label for="modelName">Name</label>

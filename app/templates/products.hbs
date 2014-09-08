@@ -1,6 +1,6 @@
 <div class="col-md-3">
   <div class="panel panel-default">
-    <div class="panel-heading">Products list</div>
+    <div class="panel-heading">Products list {{#link-to 'products.create'}}<span class="glyphicon glyphicon-plus"></span>{{/link-to}}</div>
     <div class="panel-body">
       <div class="list-group">
       {{#each model}}
@@ -9,6 +9,9 @@
       </div>
     </div>
   </div>
+  <p class="text-center">
+    {{#link-to 'products.create' classNames="btn btn-success btn-sm"}}Add a new{{/link-to}}
+  </p>
 </div>
 
 <div class="col-md-9">
