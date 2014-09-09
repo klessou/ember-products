@@ -1,4 +1,27 @@
-<div class="jumbotron">
+<div class="text-right">
+  {{#link-to 'product.edit' }}
+  <button {{bind-attr class=":btn :btn-default :btn-sm editMode:active"}} title="edit">
+    <span class="glyphicon glyphicon-pencil"></span>
+  </button>
+  {{/link-to}}
+  <button {{bind-attr class=":btn :btn-default :btn-sm :red deleteMode:active"}} {{action "delete"}} title="delete">
+    <span class="glyphicon glyphicon-trash"></span>
+  </button>
+</div>
+
+{{#if deleteMode}}
+<div class="alert alert-danger fade in" role="alert">
+  <button type="button" {{action "cancelDelete"}} class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+  <h4>Damn! Really?</h4>
+  <p>Be careful, if you remove this product you will not be able to revert this action.</p>
+  <p>
+    <button type="button" {{action "confirmDelete"}} class="btn btn-danger :btn-sm">Proceed anyway</button>
+    <button type="button" {{action "cancelDelete"}} class="btn btn-default :btn-sm">Cancel</button>
+  </p>
+</div>
+{{/if}}
+
+ <div class="jumbotron">
   <h1>{{name}}</h1>
   <p>{{description}}</p>
   {{!-- {{#each model.attributes}}
@@ -6,7 +29,5 @@
   <p>{{this.value}}</p>
   {{/each}} --}}
 </div>
-
-{{#link-to 'product.edit' model classNames="btn btn-primary btn-lg"}}Change{{/link-to}}
 
 {{outlet}}
