@@ -1,5 +1,5 @@
 <div class="text-right">
-  {{#link-to 'product.edit' }}
+  {{#link-to 'product.edit'}}
   <button {{bind-attr class=":btn :btn-default :btn-sm editMode:active"}} title="edit">
     <span class="glyphicon glyphicon-pencil"></span>
   </button>
@@ -22,8 +22,15 @@
 {{/if}}
 
  <div class="jumbotron">
-  <h1>{{name}}</h1>
+  <h1>{{brand}} - {{name}}</h1>
+  <p>{{category}} : {{usage}}</p>
+  <img {{bind-attr src=mainImage}}>
   <p>{{description}}</p>
+  <p>{{features}}</p>
+  <p>{{specialFeatures}}</p>
+  <p>{{fabricInfo}}</p>
+  <p>{{productCare}}</p>
+  <p>{{alternateNames}}</p>
   {{!-- {{#each model.attributes}}
   <p><strong>{{this.key}}:</strong></p>
   <p>{{this.value}}</p>

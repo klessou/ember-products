@@ -12,9 +12,46 @@
   {{input value=name classNames='form-control' id='modelName'}}
 </div>
 <div class="form-group">
+  <label for="modelBrand">Brand</label>
+  {{input value=brand classNames='form-control' id='modelBrand'}}
+</div>
+<div class="form-group">
+  <label for="modelCategory">Category</label>
+  {{view Ember.Select
+    content=categories
+    value=category
+    classNames='form-control'
+    id='modelCategory'
+  }}
+</div>
+<div class="form-group">
+  <label for="modelUsage">Usage</label>
+  {{input value=usage classNames='form-control' id='modelUsage'}}
+</div>
+<div class="form-group">
+  <label for="modelMainImage">Main image (url)</label>
+  {{input value=mainImage classNames='form-control' id='modelMainImage'}}
+</div>
+<div class="form-group">
   <label for="modelDescription">Description</label>
-  {{textarea value=description classNames='form-control' id='modelDescription'}}
+  {{textarea value=description classNames='form-control' id='modelDescription' rows='10'}}
 </div>  
+<div class="form-group">
+  <label for="modelFeatures">Features</label>
+  {{textarea value=features classNames='form-control' id='modelFeatures' rows='4'}}
+</div>
+<div class="form-group">
+  <label for="modelFabricInfo">Fabric info</label>
+  {{textarea value=fabricInfo classNames='form-control' id='modelFabricInfo' rows='3'}}
+</div>
+<div class="form-group">
+  <label for="modelProductCare">Product care</label>
+  {{textarea value=productCare classNames='form-control' id='modelProductCare' rows='3'}}
+</div>
+<div class="form-group">
+  <label for="modelAlternateNames">Alternate names</label>
+  {{input value=alternateNames classNames='form-control' id='modelAlternateNames'}}
+</div>
 
 {{!-- <table>
   {{#each buffer}}
@@ -28,6 +65,11 @@
   </tr>
   {{/each}}
 </table> --}}
+
+{{!-- {{#view Ember.View contentBinding="foto"}}
+    {{view EmberProducts.FotoUp}}
+    {{view EmberProducts.FotoPreview width="200" srcBinding="foto"}}
+{{/view}} --}}
 
 <button class="btn btn-primary" {{action 'save'}}>Update</button>
 <button class="btn btn-warning" {{action 'cancel'}}>Cancel</button>

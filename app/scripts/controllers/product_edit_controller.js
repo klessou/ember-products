@@ -1,4 +1,4 @@
-EmberProducts.ProductEditController = Ember.ObjectController.extend({
+EmberProducts.ProductEditController = EmberProducts.ProductsCreateEditController.extend({
   needs: 'product',
 
   edit: true,
@@ -10,6 +10,9 @@ EmberProducts.ProductEditController = Ember.ObjectController.extend({
   changed: function() {
     return moment(this.get('model.changed')).fromNow();
   }.property('model.changed'),
+
+  defaultCategory: 'Clothing',
+  categories: ['Accessories', 'Clothing', 'People', 'Others'],
 
   actions: {
     save: function(){
