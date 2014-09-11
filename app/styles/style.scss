@@ -1,5 +1,7 @@
+@import "themes/slate/variables";
 $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 @import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
+@import "themes/slate/bootswatch";
 
 /* Put your CSS here */
 html, body {
