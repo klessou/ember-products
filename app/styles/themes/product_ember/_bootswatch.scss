@@ -1,4 +1,4 @@
-// Slate 3.2.0
+// Ember product
 // Bootswatch
 // -----------------------------------------------------
 
@@ -54,63 +54,12 @@
 
 // Buttons ====================================================================
 
-.btn,
-.btn:hover {
-  border-color: rgba(0, 0, 0, 0.6);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+.btn:active {
+  @include box-shadow(none);
 }
 
-.btn-default {
-  @include btn-shadow($btn-default-bg);
-
-  &:hover {
-    @include btn-shadow-inverse($btn-default-bg);
-  }
-}
-
-.btn-primary {
-  @include btn-shadow($btn-primary-bg);
-
-  &:hover {
-    @include btn-shadow-inverse($btn-primary-bg);
-  }
-}
-
-.btn-success {
-  @include btn-shadow($btn-success-bg);
-
-  &:hover {
-    @include btn-shadow-inverse($btn-success-bg);
-  }
-}
-
-.btn-info {
-  @include btn-shadow($btn-info-bg);
-
-  &:hover {
-    @include btn-shadow-inverse($btn-info-bg);
-  }
-}
-
-.btn-warning {
-  @include btn-shadow($btn-warning-bg);
-
-  &:hover {
-    @include btn-shadow-inverse($btn-warning-bg);
-  }
-}
-
-.btn-danger {
-  @include btn-shadow($btn-danger-bg);
-
-  &:hover {
-    @include btn-shadow-inverse($btn-danger-bg);
-  }
-}
-
-.btn-link,
-.btn-link:hover {
-  border-color: transparent;
+.btn-group.open .dropdown-toggle {
+  @include box-shadow(none);
 }
 
 // Typography =================================================================

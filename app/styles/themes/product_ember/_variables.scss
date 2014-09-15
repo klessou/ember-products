@@ -1,4 +1,4 @@
-// Slate 3.2.0
+// Ember products
 // Variables
 // --------------------------------------------------
 
@@ -12,6 +12,7 @@ $gray-darker:            #272B30 !default; // #222
 $gray-dark:              #3A3F44 !default;   // #333
 $gray-light:             #7A8288 !default;   // #999
 $gray-lighter:           #999 !default; // #eee
+$gray-bg:				 #ecedf1 !default;
 
 $brand-primary:         $gray-light !default;
 $brand-success:         #62c462 !default;
@@ -26,12 +27,12 @@ $navbar-default-bg:                $gray-dark !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               $gray-darker !default;
+$body-bg:               $gray-bg !default;
 //** Global text color on `<body>`.
 $text-color:            #C8C8C8 !default;
 
 //** Global textual link color.
-$link-color:            #fff !default;
+$link-color:            $gray-darker !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      #fff !default;
 
@@ -104,7 +105,7 @@ $border-radius-large:       6px !default;
 $border-radius-small:       3px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
-$component-active-color:    #fff !default;
+$component-active-color:    $gray-darker !default;
 //** Global background color for active items (e.g., navs or dropdowns).
 $component-active-bg:       transparent !default;
 
@@ -162,7 +163,7 @@ $btn-warning-bg:                 $brand-warning !default;
 $btn-warning-border:             $btn-warning-bg !default;
 
 $btn-danger-color:               $btn-default-color !default;
-$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-bg:                  darken($brand-danger, 8%) !default;
 $btn-danger-border:              $btn-danger-bg !default;
 
 $btn-link-disabled-color:        $gray-light !default;
@@ -421,7 +422,7 @@ $navbar-inverse-toggle-border-color:        darken($navbar-inverse-bg, 12%) !def
 
 //=== Shared nav styles
 $nav-link-padding:                          10px 15px !default;
-$nav-link-hover-bg:                         lighten($body-bg, 10%) !default;
+$nav-link-hover-bg:                         $gray-darker !default;
 
 $nav-disabled-link-color:                   $gray-light !default;
 $nav-disabled-link-hover-color:             $gray-light !default;
@@ -433,12 +434,12 @@ $nav-tabs-border-color:                     darken($gray-darker, 5%) !default;
 
 $nav-tabs-link-hover-border-color:          darken($gray-darker, 5%) !default;
 
-$nav-tabs-active-link-hover-bg:             lighten($body-bg, 10%) !default;
+$nav-tabs-active-link-hover-bg:             $gray-darker !default;
 $nav-tabs-active-link-hover-color:          #fff !default;
 $nav-tabs-active-link-hover-border-color:   darken($gray-darker, 5%) !default;
 
 $nav-tabs-justified-link-border-color:            $nav-tabs-border-color !default;
-$nav-tabs-justified-active-link-border-color:     $body-bg !default;
+$nav-tabs-justified-active-link-border-color:     $gray-darker !default;
 
 //== Pills
 $nav-pills-border-radius:                   $border-radius-base !default;
@@ -709,7 +710,7 @@ $panel-footer-padding:        $panel-heading-padding !default;
 $panel-border-radius:         $border-radius-base !default;
 
 //** Border color for elements within panels
-$panel-default-heading-bg:    lighten($body-bg, 10%) !default;
+$panel-default-heading-bg:    $gray-darker !default;
 $panel-inner-border:          rgba(0, 0, 0, 0.6) !default;
 $panel-footer-bg:             $panel-default-heading-bg !default;
 

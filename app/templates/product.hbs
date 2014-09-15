@@ -1,40 +1,82 @@
-<div class="text-right">
-  {{#link-to 'product.edit'}}
-  <button {{bind-attr class=":btn :btn-default :btn-sm editMode:active"}} title="edit">
-    <span class="glyphicon glyphicon-pencil"></span>
-  </button>
-  {{/link-to}}
-  <button {{bind-attr class=":btn :btn-default :btn-sm :red deleteMode:active"}} {{action "delete"}} title="delete">
-    <span class="glyphicon glyphicon-trash"></span>
-  </button>
-</div>
+<div class="col-lg-9">
 
-{{#if deleteMode}}
-<div class="alert alert-danger fade in" role="alert">
-  <button type="button" {{action "cancelDelete"}} class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-  <h4>Damn! Really?</h4>
-  <p>Be careful, if you remove this product you will not be able to revert this action.</p>
-  <p>
-    <button type="button" {{action "confirmDelete"}} class="btn btn-danger :btn-sm">Proceed anyway</button>
-    <button type="button" {{action "cancelDelete"}} class="btn btn-default :btn-sm">Cancel</button>
-  </p>
-</div>
-{{/if}}
+  {{#if deleteMode}}
+  <div class="alert alert-danger fade in" role="alert">
+    <button type="button" {{action "cancelDelete"}} class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+    <h4>Damn! Really?</h4>
+    <p>Be careful, if you remove this product you will not be able to revert this action.</p>
+    <p>
+      <button type="button" {{action "confirmDelete"}} class="btn btn-danger :btn-sm">Proceed anyway</button>
+      <button type="button" {{action "cancelDelete"}} class="btn btn-default :btn-sm">Cancel</button>
+    </p>
+  </div>
+  {{/if}}
 
- <div class="jumbotron">
-  <h1>{{brand}} - {{name}}</h1>
-  <p>{{category}} : {{usage}}</p>
-  <img {{bind-attr src=mainImage}}>
-  <p>{{description}}</p>
-  <p>{{features}}</p>
-  <p>{{specialFeatures}}</p>
-  <p>{{fabricInfo}}</p>
-  <p>{{productCare}}</p>
-  <p>{{alternateNames}}</p>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#product" role="tab" data-toggle="tab">Main</a></li>
+    <li><a href="#features" role="tab" data-toggle="tab">Features</a></li>
+    <li><a href="#addition" role="tab" data-toggle="tab">Additionnal</a></li>
+  </ul>
+
+  <div class="toolbox text-right">
+    {{#link-to 'product.edit'}}
+    <button {{bind-attr class=":btn :btn-default :btn-sm editMode:active"}} title="edit">
+      <span class="glyphicon glyphicon-pencil"></span>
+    </button>
+    {{/link-to}}
+    <button {{bind-attr class=":btn :btn-default :btn-sm :red deleteMode:active"}} {{action "delete"}} title="delete">
+      <span class="glyphicon glyphicon-trash"></span>
+    </button>
+  </div>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="product">
+      
+
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <h1>{{brand}} - {{name}}</h1>
+          <p>{{category}} : {{usage}}</p>
+          <img {{bind-attr src=mainImage}}>
+          <p>{{description}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="features">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <h2>Features</h2>
+          <p>{{features}}</p>
+          <h2>Special features</h2>
+          <p>{{specialFeatures}}</p>
+          <h2>Frabric info</h2>
+          <p>{{fabricInfo}}</p>
+          <h2>Product care</h2>
+          <p>{{productCare}}</p>
+          {{#if alternateNames}}
+          <h2>Alternate names</h2>
+          <p>{{alternateNames}}</p>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="addition">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          ...
+        </div>
+      </div>
+    </div>
+  </div>
+
   {{!-- {{#each model.attributes}}
   <p><strong>{{this.key}}:</strong></p>
   <p>{{this.value}}</p>
   {{/each}} --}}
-</div>
+  
+  {{outlet}} 
 
-{{outlet}}
+</div>
+  
