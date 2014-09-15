@@ -32,7 +32,7 @@ module.exports = function (grunt) {
                 tasks: ['emberTemplates']
             },
             compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+                files: ['<%= yeoman.app %>/styles/**/*.{scss,sass}'],
                 tasks: ['compass:server']
             },
             neuter: {

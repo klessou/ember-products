@@ -1,4 +1,4 @@
-EmberProducts.ProductsCreateController = Ember.ObjectController.extend({
+EmberProducts.ProductsCreateController = EmberProducts.ProductsCreateEditController.extend({
   needs: 'product',
 
   edit: false,

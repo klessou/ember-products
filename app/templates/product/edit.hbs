@@ -1,35 +1,110 @@
-<h1>Product : {{name}}</h1>
+<div class="floating-window">
+  <h1>Product : {{name}}</h1>
 
-{{#if edit}}
-<div class="bg-info">
-  <p class="text-info">Created: {{created}}</p>
-  <p class="text-info">Changed: {{changed}}</p>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#product_edit" role="tab" data-toggle="tab">Main</a></li>
+    <li><a href="#features_edit" role="tab" data-toggle="tab">Features</a></li>
+    <li><a href="#addition_edit" role="tab" data-toggle="tab">Additionnal</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="product_edit">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <div class="form-group">
+            <label for="modelName">Name</label>
+            {{input value=name classNames='form-control' id='modelName'}}
+          </div>
+          <div class="form-group brandList">
+            <label for="modelBrand">Brand</label>
+            {{type-ahead-brands data=brands}}
+            {{input value=brand classNames='form-control typeahead' id='modelBrand'}}
+          </div>
+          <div class="form-group">
+            <label for="modelCategory">Category</label>
+            {{view Ember.Select
+              content=categories
+              value=category
+              classNames='form-control'
+              id='modelCategory'
+            }}
+          </div>
+          <div class="form-group">
+            <label for="modelUsage">Usage</label>
+            {{input value=usage classNames='form-control' id='modelUsage'}}
+          </div>
+          <div class="form-group">
+            <label for="modelMainImage">Main image (url)</label>
+            {{input value=mainImage classNames='form-control' id='modelMainImage'}}
+          </div>
+          <div class="form-group">
+            <label for="modelDescription">Description</label>
+            {{textarea value=description classNames='form-control' id='modelDescription' rows='10'}}
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="features_edit">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <div class="form-group">
+            <label for="modelFeatures">Features</label>
+            {{textarea value=features classNames='form-control' id='modelFeatures' rows='4'}}
+          </div>
+          <div class="form-group">
+            <label for="modelFabricInfo">Fabric info</label>
+            {{textarea value=fabricInfo classNames='form-control' id='modelFabricInfo' rows='3'}}
+          </div>
+          <div class="form-group">
+            <label for="modelProductCare">Product care</label>
+            {{textarea value=productCare classNames='form-control' id='modelProductCare' rows='3'}}
+          </div>
+          <div class="form-group">
+            <label for="modelAlternateNames">Alternate names</label>
+            {{input value=alternateNames classNames='form-control' id='modelAlternateNames'}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="addition_edit">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          ...
+          {{#if edit}}
+          <div class="panel panel-info">
+            <div class="panel-body">
+              <p>Created: {{created}}</p>
+              <p>Changed: {{changed}}</p>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{!-- <table>
+    {{#each buffer}}
+    <tr>
+      <td>
+        <strong>{{key}}:</strong>
+      </td>
+      <td>
+        {{input value=value}}
+      </td>
+    </tr>
+    {{/each}}
+  </table> --}}
+
+  {{!-- {{#view Ember.View contentBinding="foto"}}
+      {{view EmberProducts.FotoUp}}
+      {{view EmberProducts.FotoPreview width="200" srcBinding="foto"}}
+  {{/view}} --}}
+
+  <button class="btn btn-primary" {{action 'save'}}>Update</button>
+  <button class="btn btn-warning" {{action 'cancel'}}>Cancel</button>
+
+  {{outlet}}
 </div>
-{{/if}}
-
-<div class="form-group">
-  <label for="modelName">Name</label>
-  {{input value=name classNames='form-control' id='modelName'}}
-</div>
-<div class="form-group">
-  <label for="modelDescription">Description</label>
-  {{textarea value=description classNames='form-control' id='modelDescription'}}
-</div>  
-
-{{!-- <table>
-  {{#each buffer}}
-  <tr>
-    <td>
-      <strong>{{key}}:</strong>
-    </td>
-    <td>
-      {{input value=value}}
-    </td>
-  </tr>
-  {{/each}}
-</table> --}}
-
-<button class="btn btn-primary" {{action 'save'}}>Update</button>
-<button class="btn btn-warning" {{action 'cancel'}}>Cancel</button>
-
-{{outlet}}
