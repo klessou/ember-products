@@ -23,9 +23,10 @@
             <label for="modelName">Name</label>
             {{input value=name classNames='form-control' id='modelName'}}
           </div>
-          <div class="form-group">
+          <div class="form-group brandList">
             <label for="modelBrand">Brand</label>
-            {{input value=brand classNames='form-control' id='modelBrand'}}
+            {{type-ahead-brands data=brands}}
+            {{input value=brand classNames='form-control typeahead' id='modelBrand'}}
           </div>
           <div class="form-group">
             <label for="modelCategory">Category</label>
