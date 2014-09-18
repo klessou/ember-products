@@ -1,4 +1,4 @@
-EmberProducts.ProductController = Ember.ObjectController.extend({
+EmberProducts.BrandController = Ember.ObjectController.extend({
   editMode: false,
 
   actions: {
@@ -12,8 +12,8 @@ EmberProducts.ProductController = Ember.ObjectController.extend({
       // delete a user
       this.get('model').deleteRecord();
       this.get('model').save();
-      // then transition to the ProductsRoute
-      this.transitionToRoute('products');
+      // then transition to the BrandsRoute
+      this.transitionToRoute('brands');
       // set deleteMode back to false
       this.set('deleteMode', false);
     }
