@@ -1,0 +1,47 @@
+<div class="col-lg-9">
+
+  {{#if deleteMode}}
+  <div class="alert alert-danger fade in" role="alert">
+    <button type="button" {{action "cancelDelete"}} class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+    <h4>Damn! Really?</h4>
+    <p>Be careful, if you remove this brand you will not be able to revert this action.</p>
+    <p>
+      <button type="button" {{action "confirmDelete"}} class="btn btn-danger :btn-sm">Proceed anyway</button>
+      <button type="button" {{action "cancelDelete"}} class="btn btn-default :btn-sm">Cancel</button>
+    </p>
+  </div>
+  {{/if}}
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#product" role="tab" data-toggle="tab">Main</a></li>
+  </ul>
+
+  <div class="toolbox text-right">
+    {{#link-to 'brand.edit'}}
+    <button {{bind-attr class=":btn :btn-default :btn-sm editMode:active"}} title="edit">
+      <span class="glyphicon glyphicon-pencil"></span>
+    </button>
+    {{/link-to}}
+    <button {{bind-attr class=":btn :btn-default :btn-sm :red deleteMode:active"}} {{action "delete"}} title="delete">
+      <span class="glyphicon glyphicon-trash"></span>
+    </button>
+  </div>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="brand">
+      <div class="panel panel-primary">
+        <div class="panel-body">
+          <h1>{{name}}</h1>
+          <img {{bind-attr src=logo}}>
+          <p>{{description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {{outlet}} 
+
+</div>
+  

@@ -1,0 +1,17 @@
+<div class="col-lg-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">Brands list {{#link-to 'brands.create'}}<span class="glyphicon glyphicon-plus"></span>{{/link-to}}</div>
+    <div class="panel-body">
+      <div class="list-group">
+      {{#each model}}
+        {{#link-to 'brand' this classNames="list-group-item"}}{{this.name}} ({{this.id}}){{/link-to}}
+      {{/each}}
+      </div>
+    </div>
+    <p class="text-center">
+      {{#link-to 'brands.create' classNames="btn btn-primary btn-sm"}}Add a new{{/link-to}}
+    </p>
+  </div>
+</div>
+
+{{outlet}}

@@ -11,9 +11,6 @@ EmberProducts.ProductEditController = EmberProducts.ProductsCreateEditController
     return moment(this.get('model.changed')).fromNow();
   }.property('model.changed'),
 
-  defaultCategory: 'Clothing',
-  categories: ['Accessories', 'Clothing', 'People', 'Others'],
-
   actions: {
     save: function(){
       self = this
