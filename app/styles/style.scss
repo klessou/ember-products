@@ -10,6 +10,7 @@ html, body {
 
 .panel-primary > .panel-body {
   background-color: white;
+  color: $gray-dark;
 }
 
 .panel > .panel-heading > a {
@@ -30,4 +31,8 @@ html, body {
 	background-color: white;
 	width: 100%;
 	border: 1px solid $gray-darker;
+}
+
+.mainImage {
+  max-width: 100%;
 }

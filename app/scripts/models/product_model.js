@@ -89,6 +89,35 @@ EmberProducts.Product.FIXTURES = [
     
     changed: '2014-09-01T00:00:00Z',
     created: '2014-09-01T00:00:00Z',
+  },
+
+  {
+    id: 2,
+    
+    name: 'Bleu de Chauffe Courssier',
+    
+    category: 'Accessories',
+    brand: 'Bleu de Chauffe',
+    usage: 'Travel, Field, Casual, Business',
+
+    mainImage: 'http://i168.photobucket.com/albums/u170/glltn/2014-09/Bleu-De-Chauffe-For-Heschung-Fall-Winter-2014-Collection-01.jpg',
+    description: 'Protect your laptop in this large briefcase made with our nearly indestructible Rugged Twill. \
+      Inside are four roomy full-length sections. One is the perfect size for a laptop computer. \
+      More pockets hold a battery pack, diskettes, calculator, business cards, pens, pencils and notebooks. \
+      Narrow pockets on both ends, full-length outer pockets on both sides and adjustable, removable leather \
+      shoulder strap with brass-plated roller buckle and leather pad. Leather grip and storm flap with snap closures. \
+      Double bottom. Meets carry-on requirements. Made in USA.',
+    features: 'Water Repellent. \
+      Two-way brass zipper with leather pulls and storm flap with bridle leather snap tab closure. \
+      2 full length interior open pockets; 1 non-padded compartment for laptop; \
+      1 interior business card pocket; 1 interior calculator/cell phone pocket; \
+      2 full width exterior open side pockets; 2 small exterior end utility pockets. Formerly style #257',
+    specialFeatures: '1 interior brass clasp to secure keys; 1 bridle leather carrying/hanging loop.',
+    fabricInfo: 'Made from 22-oz. 100% cotton oil finish Rugged Twill with 100% Genuine Bridle Leather.',
+    productCare: 'Wipe or brush clean only.',
+    
+    changed: '2014-09-01T00:00:00Z',
+    created: '2014-09-01T00:00:00Z',
   }
   
 ];
