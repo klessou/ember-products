@@ -14,4 +14,11 @@ EmberProducts.Router.map(function () {
     this.route('create');
   });
   
+  this.resource('selections', function(){
+    this.resource('selection', { path: '/:selection_id' }, function(){
+      this.route('edit');
+    });
+    this.route('create');
+  });
+  
 });

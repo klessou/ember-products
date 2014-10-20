@@ -23,22 +23,32 @@ EmberProducts.Brand.FIXTURES = [
   {
     id: 0,
     
-    name: 'foo',
+    name: 'Filson',
     
-    logo: 'foo',
+    logo: 'http://www.filson.com/images/common/filson-logo-vintage.png',
     
-    description: 'foo'
+    description: 'C.C. Filson is a Seattle, Washington, United States-based,\
+     privately owned outfitter and manufacturer of goods for outdoor enthusiasts.\
+     The company designs, manufactures, distributes and sells men\'s and women\'s\
+     outdoor clothing, accessories and luggage. Filson sells its products\
+     via company-owned retail stores, catalogs and the Filson website as well\
+     as through authorized dealers in the United States and international\
+     distributors. The company was originally established in Seattle in 1897 as\
+     C.C. Filson\'s Pioneer Alaska Clothing and Blanket Manufacturers to meet\
+     the needs of prospectors passing through Seattle on their way to the\
+     Klondike Gold Rush.'
     
   },
   
   {
     id: 1,
     
-    name: 'foo',
+    name: 'Bleu de Chauffe',
     
-    logo: 'foo',
+    logo: 'http://kingdomofstyle.typepad.co.uk/.a/6a00d8341c2f0953ef01a3fd25d518970b-750wi',
     
-    description: 'foo'
+    description: 'Bleu de Chauffe workshop is located in Aveyron, just near by Millau and  the famous viaduct (France).\
+    The cutting, fabrication and stitching are hand-made by qualified artisans renowed for their skill, experience and expertise. Bleu de Chauffe bags are the best example of what our workshop have to offer.'
     
   }
   

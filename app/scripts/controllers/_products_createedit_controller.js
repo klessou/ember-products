@@ -3,7 +3,12 @@ EmberProducts.ProductsCreateEditController = Ember.ObjectController.extend({
 
   defaultCategory: 'Clothing',
   categories: ['Accessories', 'Clothing', 'People', 'Others'],
-  brands: ['A.P.C.', 'Acne Studios', 'DKNY', 'Filson', 'Lanvin'],
+
+  brands: function() {
+    var brandsPromise = this.get('store').find('brand');
+
+    return brandsPromise;
+  }.property(),
 
 });
 
