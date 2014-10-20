@@ -5,7 +5,7 @@ EmberProducts.BrandsCreateRoute = Ember.Route.extend({
     return this.store.createRecord('brand');
   },
   
-  // in this case (the create route) we can re-use the user/edit template
+  // in this case (the create route) we can re-use the brand/edit template
   // associated with the productsCreateController
   renderTemplate: function(){
     this.render('brand.edit', {
